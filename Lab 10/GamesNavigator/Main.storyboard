@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-Ct-001">
+    <device id="retina6_3" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nvS-cN-001">
+            <objects>
+                <navigationController id="nav-Ct-001" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="nvB-ar-002">
+                        <rect key="frame" x="0.0" y="62" width="402" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BrandColor"/>
+                        <color key="barTintColor" name="NavBarColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rot-Sg-003"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvF-rR-004" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="-34"/>
+        </scene>
+        <!--My Games-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GamesNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="300" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-Vw-001">
+                                <rect key="frame" x="0.0" y="158" width="402" height="716"/>
+                                <color key="backgroundColor" name="AppBackground"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" id="cel-Vw-002" customClass="FavoriteCell" customModule="GamesNavigator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="402" height="290"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cel-Vw-002" id="cnt-Vw-003">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="290"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crd-Vw-040" userLabel="Card">
+                                                    <rect key="frame" x="16" y="8" width="370" height="274"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hollow_knight" translatesAutoresizingMaskIntoConstraints="NO" id="cvr-Im-004">
+                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="173"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="cvr-Im-004" secondAttribute="height" multiplier="460:215" id="cvr-Ar-005"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="1" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-Lb-008">
+                                                            <rect key="frame" x="12" y="185" width="260" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="★★★★★" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rat-Lb-041">
+                                                            <rect key="frame" x="290" y="186" width="68" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" name="BrandColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sub-Lb-042">
+                                                            <rect key="frame" x="12" y="210" width="346" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" name="SecondaryText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tag-St-043" userLabel="Tags Stack">
+                                                            <rect key="frame" x="12" y="236" width="200" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="tag-Ht-044"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="CardColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="cvr-Im-004" firstAttribute="top" secondItem="crd-Vw-040" secondAttribute="top" id="cc1-Ct-050"/>
+                                                        <constraint firstItem="cvr-Im-004" firstAttribute="leading" secondItem="crd-Vw-040" secondAttribute="leading" id="cc2-Ct-051"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cvr-Im-004" secondAttribute="trailing" id="cc3-Ct-052"/>
+                                                        <constraint firstItem="ttl-Lb-008" firstAttribute="top" secondItem="cvr-Im-004" secondAttribute="bottom" constant="12" id="cc4-Ct-053"/>
+                                                        <constraint firstItem="ttl-Lb-008" firstAttribute="leading" secondItem="crd-Vw-040" secondAttribute="leading" constant="12" id="cc5-Ct-054"/>
+                                                        <constraint firstItem="rat-Lb-041" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ttl-Lb-008" secondAttribute="trailing" constant="8" id="cc6-Ct-055"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rat-Lb-041" secondAttribute="trailing" constant="12" id="cc7-Ct-056"/>
+                                                        <constraint firstItem="rat-Lb-041" firstAttribute="centerY" secondItem="ttl-Lb-008" secondAttribute="centerY" id="cc8-Ct-057"/>
+                                                        <constraint firstItem="sub-Lb-042" firstAttribute="top" secondItem="ttl-Lb-008" secondAttribute="bottom" constant="4" id="cc9-Ct-058"/>
+                                                        <constraint firstItem="sub-Lb-042" firstAttribute="leading" secondItem="crd-Vw-040" secondAttribute="leading" constant="12" id="cca-Ct-059"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sub-Lb-042" secondAttribute="trailing" constant="12" id="ccb-Ct-060"/>
+                                                        <constraint firstItem="tag-St-043" firstAttribute="top" secondItem="sub-Lb-042" secondAttribute="bottom" constant="10" id="ccc-Ct-061"/>
+                                                        <constraint firstItem="tag-St-043" firstAttribute="leading" secondItem="crd-Vw-040" secondAttribute="leading" constant="12" id="ccd-Ct-062"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tag-St-043" secondAttribute="trailing" constant="12" id="cce-Ct-063"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tag-St-043" secondAttribute="bottom" constant="14" id="ccf-Ct-064"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="crd-Vw-040" firstAttribute="top" secondItem="cnt-Vw-003" secondAttribute="top" constant="8" id="cn1-Ct-011"/>
+                                                <constraint firstItem="crd-Vw-040" firstAttribute="leading" secondItem="cnt-Vw-003" secondAttribute="leading" constant="16" id="cn2-Ct-012"/>
+                                                <constraint firstAttribute="trailing" secondItem="crd-Vw-040" secondAttribute="trailing" constant="16" id="cn3-Ct-013"/>
+                                                <constraint firstAttribute="bottom" secondItem="crd-Vw-040" secondAttribute="bottom" constant="8" id="cn4-Ct-014"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="crd-Vw-040" id="out-Cd-018"/>
+                                            <outlet property="coverImageView" destination="cvr-Im-004" id="out-Cv-019"/>
+                                            <outlet property="ratingLabel" destination="rat-Lb-041" id="out-Rt-020"/>
+                                            <outlet property="subtitleLabel" destination="sub-Lb-042" id="out-Sb-029"/>
+                                            <outlet property="tagsStackView" destination="tag-St-043" id="out-Tg-031"/>
+                                            <outlet property="titleLabel" destination="ttl-Lb-008" id="out-Tl-021"/>
+                                            <segue destination="det-Vc-100" kind="show" identifier="showDetail" id="shw-Sg-030"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="out-Ds-022"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="tbl-Vw-001" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tb1-Ct-023"/>
+                            <constraint firstItem="tbl-Vw-001" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tb2-Ct-024"/>
+                            <constraint firstAttribute="trailing" secondItem="tbl-Vw-001" secondAttribute="trailing" id="tb3-Ct-025"/>
+                            <constraint firstAttribute="bottom" secondItem="tbl-Vw-001" secondAttribute="bottom" id="tb4-Ct-026"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Games" largeTitleDisplayMode="always" id="lst-Ni-028"/>
+                    <connections>
+                        <outlet property="tableView" destination="tbl-Vw-001" id="out-Tb-027"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="det-Sc-099">
+            <objects>
+                <viewController id="det-Vc-100" customClass="DetailViewController" customModule="GamesNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="det-Vw-101">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scr-Vw-102">
+                                <rect key="frame" x="0.0" y="116" width="402" height="758"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hollow_knight" translatesAutoresizingMaskIntoConstraints="NO" id="det-Im-104">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="188"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="det-Im-104" secondAttribute="height" multiplier="460:215" id="det-Ar-105"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="det-Gr-130" customClass="GradientView" customModule="GamesNavigator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="402" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="det-Gh-131"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="leading" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="det-St-103" userLabel="Content Stack">
+                                        <rect key="frame" x="16" y="192" width="370" height="420"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Lb-106">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="31"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Lb-107">
+                                                <rect key="frame" x="0.0" y="45" width="370" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                <color key="textColor" name="SecondaryText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="det-Tg-132" userLabel="Tags Stack">
+                                                <rect key="frame" x="0.0" y="76" width="200" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="det-Th-133"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="det-Rr-134" userLabel="Rating Row">
+                                                <rect key="frame" x="0.0" y="112" width="230" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RATING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Rl-135">
+                                                        <rect key="frame" x="0.0" y="4" width="78" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" name="SecondaryText"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="det-St-108" userLabel="Stars Stack">
+                                                        <rect key="frame" x="90" y="0.0" width="140" height="24"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds0-Im-200">
+                                                                <rect key="frame" x="0.0" y="1" width="24" height="22"/>
+                                                                <color key="tintColor" name="BrandColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-Im-201">
+                                                                <rect key="frame" x="28" y="1" width="24" height="22"/>
+                                                                <color key="tintColor" name="BrandColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds2-Im-202">
+                                                                <rect key="frame" x="56" y="1" width="24" height="22"/>
+                                                                <color key="tintColor" name="BrandColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds3-Im-203">
+                                                                <rect key="frame" x="84" y="1" width="24" height="22"/>
+                                                                <color key="tintColor" name="BrandColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-Im-204">
+                                                                <rect key="frame" x="112" y="1" width="24" height="22"/>
+                                                                <color key="tintColor" name="BrandColor"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="det-Bt-136">
+                                                <rect key="frame" x="0.0" y="150" width="370" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="det-Bh-137"/>
+                                                </constraints>
+                                                <state key="normal" title="View on Steam"/>
+                                                <connections>
+                                                    <action selector="steamButtonTapped:" destination="det-Vc-100" eventType="touchUpInside" id="det-Ba-138"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT THIS GAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Ab-139">
+                                                <rect key="frame" x="0.0" y="212" width="130" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                <color key="textColor" name="SecondaryText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Lb-109">
+                                                <rect key="frame" x="0.0" y="242" width="370" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="BodyText"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="det-Lb-106" firstAttribute="width" secondItem="det-St-103" secondAttribute="width" id="det-Iw-110"/>
+                                            <constraint firstItem="det-Lb-107" firstAttribute="width" secondItem="det-St-103" secondAttribute="width" id="det-Iw-140"/>
+                                            <constraint firstItem="det-Bt-136" firstAttribute="width" secondItem="det-St-103" secondAttribute="width" id="det-Iw-141"/>
+                                            <constraint firstItem="det-Lb-109" firstAttribute="width" secondItem="det-St-103" secondAttribute="width" id="det-Iw-142"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="det-Im-104" firstAttribute="top" secondItem="cLG-Gd-111" secondAttribute="top" id="sc6-Ct-150"/>
+                                    <constraint firstItem="det-Im-104" firstAttribute="leading" secondItem="cLG-Gd-111" secondAttribute="leading" id="sc7-Ct-151"/>
+                                    <constraint firstItem="det-Im-104" firstAttribute="width" secondItem="fLG-Gd-112" secondAttribute="width" id="sc8-Ct-152"/>
+                                    <constraint firstItem="det-Gr-130" firstAttribute="leading" secondItem="det-Im-104" secondAttribute="leading" id="sc9-Ct-153"/>
+                                    <constraint firstItem="det-Gr-130" firstAttribute="trailing" secondItem="det-Im-104" secondAttribute="trailing" id="sca-Ct-154"/>
+                                    <constraint firstItem="det-Gr-130" firstAttribute="bottom" secondItem="det-Im-104" secondAttribute="bottom" id="scb-Ct-155"/>
+                                    <constraint firstItem="det-St-103" firstAttribute="top" secondItem="det-Im-104" secondAttribute="bottom" constant="4" id="sc1-Ct-113"/>
+                                    <constraint firstItem="det-St-103" firstAttribute="leading" secondItem="cLG-Gd-111" secondAttribute="leading" constant="16" id="sc2-Ct-114"/>
+                                    <constraint firstItem="cLG-Gd-111" firstAttribute="trailing" secondItem="det-St-103" secondAttribute="trailing" constant="16" id="sc3-Ct-115"/>
+                                    <constraint firstItem="cLG-Gd-111" firstAttribute="bottom" secondItem="det-St-103" secondAttribute="bottom" constant="32" id="sc4-Ct-116"/>
+                                    <constraint firstItem="det-St-103" firstAttribute="width" secondItem="fLG-Gd-112" secondAttribute="width" constant="-32" id="sc5-Ct-117"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cLG-Gd-111"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fLG-Gd-112"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="det-Sa-118"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="scr-Vw-102" firstAttribute="top" secondItem="det-Sa-118" secondAttribute="top" id="dt1-Ct-119"/>
+                            <constraint firstItem="scr-Vw-102" firstAttribute="leading" secondItem="det-Vw-101" secondAttribute="leading" id="dt2-Ct-120"/>
+                            <constraint firstAttribute="trailing" secondItem="scr-Vw-102" secondAttribute="trailing" id="dt3-Ct-121"/>
+                            <constraint firstAttribute="bottom" secondItem="scr-Vw-102" secondAttribute="bottom" id="dt4-Ct-122"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game" largeTitleDisplayMode="never" id="det-Ni-123"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="det-Im-104" id="det-Oc-124"/>
+                        <outlet property="descriptionLabel" destination="det-Lb-109" id="det-Od-125"/>
+                        <outlet property="gradientView" destination="det-Gr-130" id="det-Og-143"/>
+                        <outlet property="steamButton" destination="det-Bt-136" id="det-Ob-144"/>
+                        <outlet property="subtitleLabel" destination="det-Lb-107" id="det-Os-126"/>
+                        <outlet property="tagsStackView" destination="det-Tg-132" id="det-Otg-145"/>
+                        <outlet property="titleLabel" destination="det-Lb-106" id="det-Ot-127"/>
+                        <outletCollection property="starImageViews" destination="ds0-Im-200" collectionClass="NSMutableArray" id="dc0-St-210"/>
+                        <outletCollection property="starImageViews" destination="ds1-Im-201" collectionClass="NSMutableArray" id="dc1-St-211"/>
+                        <outletCollection property="starImageViews" destination="ds2-Im-202" collectionClass="NSMutableArray" id="dc2-St-212"/>
+                        <outletCollection property="starImageViews" destination="ds3-Im-203" collectionClass="NSMutableArray" id="dc3-St-213"/>
+                        <outletCollection property="starImageViews" destination="ds4-Im-204" collectionClass="NSMutableArray" id="dc4-St-214"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="det-Fr-128" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hollow_knight" width="460" height="215"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="AppBackground">
+            <color red="0.10588235294117647" green="0.15686274509803921" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BodyText">
+            <color red="0.77647058823529413" green="0.83137254901960789" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandColor">
+            <color red="0.40000000000000002" green="0.75294117647058822" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CardColor">
+            <color red="0.086274509803921567" green="0.12549019607843137" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavBarColor">
+            <color red="0.090196078431372548" green="0.10196078431372549" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.5607843137254902" green="0.59607843137254901" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "it_takes_two.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "disco_elysium.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
